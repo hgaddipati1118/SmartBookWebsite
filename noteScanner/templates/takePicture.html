@@ -1,0 +1,38 @@
+<html>
+  <head>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'noteScanner/style.css' %}">
+<style>
+  #canvas{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  }
+</style>
+   <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+  </head>
+  <body>
+    <h1 class="title">SmartBook</h1>
+    <form method = "post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form2.as_p }}
+      <button id="hiddenSubmit"  type="submit">Skip to Processing</button>
+  </form>
+    <form>
+        <label for="title">Title:SmartBookPic</label>
+        <input type="text" id="title" name="title" value = "">
+      </form>
+<video id="webcam" autoplay playsinline width="640" height="480"></video>
+<canvas id="canvas" class="d-none"></canvas>
+<audio id="snapSound"  "{% static 'noteScanner/snap.wav' %}" preload = "auto"></audio>
+<button onclick="webcam.snap()"> Take Picture </button>
+<button onclick="saveFile()"> Save Image </button>
+ <form method = "post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button id="hiddenSubmit" hidden type="submit">Process the picture</button>
+</form>
+</body>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="{% static 'noteScanner/homepage.js' %}"> </script>
+  </html>

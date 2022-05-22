@@ -1,0 +1,15 @@
+{% load static %}
+<h1 class="title">SmartBook</h1>
+<h2>Title: {{title}}</h2>
+<h2>Folder: {{folder}}</h2>
+<h2>Initial Language: {{origLang}}</h2>
+<h2>Document Language: {{docLang}}</h2>
+<link rel="stylesheet" type="text/css" href="{% static 'noteScanner/style.css' %}">
+<audio controls>
+    <source src="{{destination}}" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+{% for line in uploadText %}
+    <p>{{ line }}</p>
+{% endfor %}
+<img class="textImage" src= "{{source}}" /> 
