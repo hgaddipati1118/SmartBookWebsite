@@ -1,1 +1,2 @@
 $env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\hgadd\Documents\EDDApp\googleCloudKey.json"
+$env:GOOGLE_APPLICATION_CREDENTIALS="googleCloudKey.json"

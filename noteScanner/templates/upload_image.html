@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1 class="title">SmartBook</h1>
+    <a href="{% url 'takePicture' %}">Take a Picture</a>
     <form method = "post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}

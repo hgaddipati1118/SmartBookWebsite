@@ -12,7 +12,7 @@ webcam.start()
 let picture = webcam.snap();
 var today = new Date();
 var todayNum = Math.floor(today.getTime());
-document.getElementById("title").value = "SmartBook" + todayNum
+document.getElementById("title").value = todayNum;
 function saveFile() {
     var link = document.createElement("a");
     console.log(todayNum)

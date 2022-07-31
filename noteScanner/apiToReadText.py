@@ -51,7 +51,7 @@ class pictureOfText:
         self.fileTitle = self.fileName.split(self.fileExtension)[0]
         a = getTextFromPicture(filePath)
         self.pictureText = a
-        print(len(a))
+        print(a)
         self.textExists = False
         if(len(a)>0):
             self.textExists = True

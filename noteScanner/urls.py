@@ -7,7 +7,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import *
 urlpatterns = [
-    path('', views.noteScanner, name='hello_world'),      
+    path('', views.noteScanner, name='hello_world'),    
+    path('takePicture', views.noteScanner, name='takePicture'),   
       path('processImage', processImage, name = 'processImage'),
     path('success', success, name = 'success'),
 ]

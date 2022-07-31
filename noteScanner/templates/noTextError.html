@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'noteScanner/style.css' %}">
 
 <h1 class="title">SmartBook</h1>
+<a href="{% url 'processImage' %}">Process Another Image</a>
 <h2>Error no text is found in image uploaded</h2>
 <p> Please go back on your browser and try a different image</p>
 <img class="textImage" src= "{{source}}" /> 

@@ -16,14 +16,14 @@
     <form method = "post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form2.as_p }}
-      <button id="hiddenSubmit"  type="submit">Skip to Processing</button>
+      <button id="hiddenSubmit"  type="submit">Go to Processing</button>
   </form>
     <form>
         <label for="title">Title:SmartBookPic</label>
         <input type="text" id="title" name="title" value = "">
       </form>
-<video id="webcam" autoplay playsinline width="640" height="480"></video>
-<canvas id="canvas" class="d-none"></canvas>
+<video id="webcam" autoplay playsinline width="600" height="540"></video>
+<canvas id="canvas" width="600" height="480" class="d-none"></canvas><br>
 <audio id="snapSound"  "{% static 'noteScanner/snap.wav' %}" preload = "auto"></audio>
 <button onclick="webcam.snap()"> Take Picture </button>
 <button onclick="saveFile()"> Save Image </button>
