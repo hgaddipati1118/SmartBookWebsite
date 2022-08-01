@@ -29,11 +29,10 @@ gauth = GoogleAuth()
 gauth.LocalWebserverAuth()       
 drive = GoogleDrive(gauth)
 
-source_dir = r"media\static\noteScanner\input"
-outputDirectory = r"media\static\noteScanner\output"
-print(os.getcwd())
-os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
-print(os.getcwd())
+source_dir = r"\media\static\noteScanner\input"
+outputDirectory = r"\media\static\noteScanner\output"
+source_dir = os.getcwd() + source_dir
+outputDirectory = os.getcwd() + outputDirectory
 class pictureOfText:
     def __init__(self, fileName):
         fileNameArray = fileName.split("/")
