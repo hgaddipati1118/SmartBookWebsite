@@ -70,7 +70,9 @@ cover/
 
 # Translations
 *.mo
-
+#secretKeys
+client_secrets.json
+credentials.json
 # Django stuff:
 
 # Flask stuff:
