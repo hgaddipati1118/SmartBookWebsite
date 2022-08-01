@@ -22,9 +22,9 @@ from pydrive.auth import GoogleAuth
 # Below code does the authentication
 from PIL import Image as funkyDunk
 # part of the code
+print(os.getcwd())
 gauth = GoogleAuth()
-  
-# Creates local webserver and auto
+  # Creates local webserver and auto
 # handles authentication.
 gauth.LocalWebserverAuth()       
 drive = GoogleDrive(gauth)
